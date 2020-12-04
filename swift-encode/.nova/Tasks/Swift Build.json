@@ -1,0 +1,18 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "swift build"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nset -e\n\nswift build\nclear\n.build\/debug\/swift-encode $*"
+    }
+  },
+  "arguments" : [
+    "hey-joe-jam1.m4v",
+    "--out encoded-output"
+  ],
+  "identifier" : "44C9AF39-AA6D-49E2-ACF2-84CC0B35F70F",
+  "openLogOnRun" : "start"
+}
